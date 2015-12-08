@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plugin ngetik</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script type="text/javascript" src="angular.min.js"></script>
+</head>
+
+
+<body data-ng-app="testApp" data-ng-controller="testCtrl">
+
+  <div class="container content" style="margin-top:45px;">
+  
+    <div class="row">
+      <div class="col-md-12">
+        
+        
+        <div class="label label-danger">Enter something</div>
+        
+        <input type="text" betot-delaydone finishfunction="callback(delayedInput)" data-ng-model="delayedInput" class="form-control">
+        <h3> <span data-ng-bind="afterType" data-ng-init="afterType = '...'" class="label label-primary">Yolo</span></h3>
+      </div>
+    </div>
+    
+  </div>
+  
+  <script type="text/javascript" src="angular-stoptype.js"></script>
+  
+  <script type="text/javascript">
+    
+    var ang = angular.module('testApp', ['betotStoptype']);
+    
+    ang.controller('testCtrl', function($scope){
+      
+      //typeStop.betotTest();
+      
+      $scope.callback = function(typed) {
+        $scope.afterType = typed;
+        console.log('this is the callback');
+      }
+    });
+    
+    
+  </script>
+</body>
+</html>
