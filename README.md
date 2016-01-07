@@ -15,7 +15,7 @@ This is your module and controller should be
         
       }
     });
-  </script>
+</script>
 ```
 
 #html markup
